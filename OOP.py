@@ -6,6 +6,12 @@ class Students:
         self.courses=courses
         Students.students_no += 1
     
+    def get_name(self):
+        return self.name
+
+    def set_name(self, new_name):
+         self.name = new_name
+    
     def Describe(self):
         print(f'my name is {self.name} , my age is {self.age}, my courses is {self.courses}')
     
