@@ -15,7 +15,23 @@ class Students:
     def years( cls, name , birthYear ):
         return cls(name , date.today().year - birthYear)
 
+class Pizza :
+    def __init__(self, ingredients):
+         self.ingredients = ingredients
 
-student0=Students("ahmed", 25)
-student1=Students.years("andrew", 1995 )
-print(student1.describe())
+    @classmethod 
+    def margrita(cls):
+        return cls(["mozarila" , "tomato" , "onions"])
+
+    @classmethod 
+    def veg(cls):
+        return cls(["tomato" , "onions" , "salsa"])
+
+    def des(self):
+        print(f"my pizza ingredients {self.ingredients}")
+
+pizza1= Pizza.margrita()
+pizza2= Pizza.veg()
+pizza3= Pizza(["beef" , "shawrma" , "strips"])
+
+print(pizza3.des())
